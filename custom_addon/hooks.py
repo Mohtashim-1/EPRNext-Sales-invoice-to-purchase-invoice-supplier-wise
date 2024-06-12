@@ -116,13 +116,18 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
+# doctype_js ={
+#     "Purchase Order" : ""
 # }
+
+doc_events = {
+	"*": {
+        "on_update": "custom_addon.custom_addon.custom_folder.sales_order.sales_order.on_submit",
+		# "on_cancel": "custom_addon.custom_folder.sales_order.sales_order.on_cancel",
+        # "on_update": "method",
+		# "on_trash": "method"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
